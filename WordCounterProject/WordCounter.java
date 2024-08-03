@@ -16,7 +16,7 @@ public class WordCounter extends JFrame {
 
         setTitle("Word Counter");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(400, 300);
+        setSize(800, 600);
         setLocationRelativeTo(null);
         setResizable(false);
         setIcon();
@@ -28,6 +28,8 @@ public class WordCounter extends JFrame {
         panel.setLayout(new BorderLayout());
 
         textArea = new JTextArea();
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
         textArea.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
